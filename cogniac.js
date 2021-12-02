@@ -41,11 +41,6 @@
         //$.getJSON("https://api.cogniac.io/1/users/current/tenants", 
 
         var val 
-        console.log('CREDS:******************')
-        console.log(tableau.username)
-        console.log(tableau.password)
-        console.log(tableau.stupid)
-
         $.ajax
         ({
           type: "GET",
@@ -80,11 +75,6 @@
         $("#submitButton").click(function() {
             tableau.username = document.getElementById("useremail").value
             tableau.password = document.getElementById("userpassword").value
-            tableau.stupid = "stupid"
-            console.log('BTTON CREDS')
-            console.log(tableau.username)
-            console.log(tableau.password)
-            console.log(tableau.stupid)
             tableau.connectionName = "Cogniac Test Connection"; // This will be the data source name in Tableau
             tableau.submit(); // This sends the connector object to Tableau
         });
